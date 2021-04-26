@@ -12,3 +12,28 @@ set.addEventListener('click', () => {
   console.log(state.name);
   display.textContent = state.name
 })
+
+const homeLink = document.querySelector('#home')
+const aboutLink = document.querySelector('#about')
+
+const indexTemplate = `
+  <h1>Hello Index</h1>
+  <p>This is my index template, pretty cool</p>
+`
+
+const aboutTemplate = `
+  <h1>About This Template</h1>
+  <p>A quick way to see if this is rendering on click.</p>
+`
+
+homeLink.addEventListener('click', (e)=> {
+  e.preventDefault()
+
+  display.innerHTML = indexTemplate
+})
+
+aboutLink.addEventListener('click', (e)=> {
+  e.preventDefault()
+
+  display.innerHTML = aboutTemplate
+})
