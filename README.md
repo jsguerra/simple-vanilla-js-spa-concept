@@ -1,5 +1,3 @@
-# A Simple Vanilla JS Sate Management example
+# A Simple Vanilla JS SAP Concept
 
-A very simple page with a script written in pure vanilla javascript demonstrating state management and content rendering on page.
-
-This is just for testing and fun.
+This is just an app experimenting with Single App Page concepts in plain vanilla javascript.
