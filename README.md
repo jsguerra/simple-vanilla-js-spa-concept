@@ -1,3 +1,3 @@
-# A Simple Vanilla JS SAP Concept
+# A Simple Vanilla JS SPA Concept
 
-This is just an app experimenting with Single App Page concepts in plain vanilla javascript.
+This is just an app experimenting with Single Page App concepts in plain vanilla javascript.
