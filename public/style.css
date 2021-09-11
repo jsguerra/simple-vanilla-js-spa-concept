@@ -21,3 +21,35 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Begin custom styles */
+.nav-main {
+  background-color: skyblue;
+  margin-bottom: 40px;
+  padding: 1rem;
+}
+
+.nav-main ul {
+  display: flex;
+  margin: auto;
+  max-width: 1180px;
+  width: 100%;
+}
+
+.nav-main ul li {
+  margin-right: 10px;
+}
+
+.container {
+  margin: auto;
+  max-width: 1180px;
+  width: 100%;
+}
+
+.form-elements {
+  margin-bottom: 40px;
+}
+
+#display {
+  background-color: #f9f9f9;
+}
