@@ -1,39 +1,45 @@
-// Set initial state to an empty oboject
-const state = {}
+'use strict'
 
-// Setup variables for the frontend
-const display = document.getElementById('display')
-const nameInput = document.getElementById('name')
-const set = document.getElementById('set')
+// DOM Elements
+const elements = {
+  mainContent: document.getElementById('app'),
+  inputField: document.getElementById('name'),
+  setContent: document.getElementById('set'),
+  navButtons: document.querySelectorAll('.nav-main button')
+}
+console.log(Array.from(elements.navButtons))
 
-// Add event listener to change the state property on click
-set.addEventListener('click', () => {
-  state.name = nameInput.value
-  console.log(state.name);
-  display.textContent = state.name
+// Templates
+const templates = {
+  home: `
+    <h1>Hello Index</h1>
+    <p>This is my index template, pretty cool</p>
+  `,
+  about: `
+    <h1>About This Template</h1>
+    <p>A quick way to see if this is rendering on click.</p>
+  `
+}
+
+// Add event listener to change page content
+document.addEventListener('DOMContentLoaded', () => {
+  elements.mainContent.innerHTML = templates.home
 })
 
-const homeLink = document.querySelector('#home')
-const aboutLink = document.querySelector('#about')
-
-const indexTemplate = `
-  <h1>Hello Index</h1>
-  <p>This is my index template, pretty cool</p>
-`
-
-const aboutTemplate = `
-  <h1>About This Template</h1>
-  <p>A quick way to see if this is rendering on click.</p>
-`
-
-homeLink.addEventListener('click', (e)=> {
+set.addEventListener('click', (e) => {
   e.preventDefault()
 
-  display.innerHTML = indexTemplate
+  elements.mainContent.textContent = elements.inputField.value
 })
 
-aboutLink.addEventListener('click', (e)=> {
-  e.preventDefault()
+Array.from(elements.navButtons).map(navButton => {
+  navButton.addEventListener('click', (e) => {
+    e.preventDefault()
 
-  display.innerHTML = aboutTemplate
+    if (e.target.textContent === 'Home') {
+      elements.mainContent.innerHTML = templates.home
+    } else if (e.target.textContent === 'About') {
+      elements.mainContent.innerHTML = templates.about
+    }
+  })
 })
