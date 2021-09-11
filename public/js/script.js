@@ -7,7 +7,6 @@ const elements = {
   setContent: document.getElementById('set'),
   navButtons: document.querySelectorAll('.nav-main button')
 }
-console.log(Array.from(elements.navButtons))
 
 // Templates
 const templates = {
